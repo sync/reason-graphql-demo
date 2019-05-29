@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '../../utils/testUtils';
-import ActiveLink from '../ActiveLink';
+import ActiveLink from '../ActiveLink.gen';
 
 describe('ActiveLink', () => {
   it('renders an active link', () => {

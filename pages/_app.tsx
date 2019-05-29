@@ -2,7 +2,7 @@ import App, { Container } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { ClientContext, GraphQLClient } from 'graphql-hooks';
-import Header from '../src/components/Header';
+import Header from '../src/components/Header.gen';
 import withGraphQLClient from '../src/helpers/withGraphQLClient';
 
 type Props = {
