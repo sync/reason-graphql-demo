@@ -1,0 +1,21 @@
+{
+  "name": "Reddit",
+  "short_name": "reason-graphql-demo",
+  "background_color": "#FFFFFF",
+  "theme_color": "#673AB7",
+  "description": "reddit pwa next.js",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/static/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

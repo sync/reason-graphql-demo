@@ -1,0 +1,44 @@
+{
+  "name": "reason-graphql-demo",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "pages",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": ["reason-react", "re-classnames"],
+  "reason": { "react-jsx": 3 },
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bsc-flags": ["-bs-super-errors"],
+  "ppx-flags": ["graphql_ppx/ppx"],
+  "refmt": 3,
+  "warnings": {
+    "number": "+A-48",
+    "error": "+A-3-44-102"
+  },
+  "gentypeconfig": {
+    "language": "typescript",
+    "module": "es6",
+    "importPath": "relative",
+    "shims": {
+      "Js": "Js",
+      "React": "ReactShim",
+      "ReactEvent": "ReactEvent",
+      "ReasonPervasives": "ReasonPervasives",
+      "ReasonReact": "ReactShim"
+    },
+    "debug": {
+      "all": false,
+      "basic": false
+    },
+    "exportInterfaces": false
+  }
+}

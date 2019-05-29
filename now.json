@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "name": "reason-graphql-demo",
+  "alias": "reason-graphql-demo.now.sh",
+  "public": false,
+  "regions": ["all"],
+  "builds": [
+    { "src": "/static/*", "use": "@now/static" },
+    {
+      "src": "packages/api/index.ts",
+      "use": "@now/node-server"
+    },
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    {
+      "src": "/service-worker.js$",
+      "dest": "/_next/static/service-worker.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
+    },
+    {
+      "src": "/graphql",
+      "dest": "/packages/api/index.ts"
+    },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
