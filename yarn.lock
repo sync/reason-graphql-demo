@@ -6512,10 +6512,10 @@ graphql-hooks-memcache@1.2.0:
     "@sindresorhus/fnv1a" "^1.0.0"
     tiny-lru "^6.0.1"
 
-graphql-hooks-ssr@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/graphql-hooks-ssr/-/graphql-hooks-ssr-1.1.1.tgz#0c4660c582171d9bb4e5e75715fc9a604861c3de"
-  integrity sha512-Mci97nm7iSD9iSOFOJxI327ATh5Cwo500PeC5uzby+8Q+O7lqLws2aQNlGV/EkjgLE80ez1vd/HUZJ2Do5e83A==
+graphql-hooks-ssr@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/graphql-hooks-ssr/-/graphql-hooks-ssr-1.1.2.tgz#71479b8dd441f1875b61d784fc4c003b76d46293"
+  integrity sha512-87GwmZcjEtjboduxrN1cRhxbho1A8UXv3NIDKKTnU5h4HIupcZBy05k01m8O+fN6yEn0mbNY8V5SJhU9uMN85A==
 
 graphql-hooks@3.5.1:
   version "3.5.1"
