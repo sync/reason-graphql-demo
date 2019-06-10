@@ -44,7 +44,7 @@
     "graphql-hooks-memcache": "1.2.0",
     "graphql-hooks-ssr": "1.1.2",
     "isomorphic-fetch": "2.2.1",
-    "next": "8.1.1-canary.49",
+    "next": "8.1.1-canary.50",
     "prop-types": "15.7.2",
     "re-classnames": "4.0.0",
     "react": "16.8.6",
