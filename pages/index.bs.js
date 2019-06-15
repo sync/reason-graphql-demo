@@ -5,8 +5,8 @@ import * as React from "react";
 import * as Js_exn from "bs-platform/lib/es6/js_exn.js";
 import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
 import * as Js_json from "bs-platform/lib/es6/js_json.js";
+import * as ApolloHooks from "../src/bindings/ApolloHooks.bs.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
-import * as GraphqlHooks from "../src/bindings/GraphqlHooks.bs.js";
 
 function ste(prim) {
   return prim;
@@ -126,7 +126,7 @@ var SubredditQuery = /* module */[
 
 function Index(Props) {
   var query = make("reactjs", /* () */0);
-  var result = GraphqlHooks.useQuery(query);
+  var result = ApolloHooks.useQuery(query);
   if (typeof result === "number") {
     return React.createElement("div", undefined, "Loading");
   } else if (result.tag) {
