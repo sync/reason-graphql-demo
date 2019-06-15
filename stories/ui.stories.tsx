@@ -2,6 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Header from '../src/components/Header.gen';
 import ActiveLink from '../src/components/ActiveLink.gen';
+import Picker from '../src/components/Picker.gen';
 
 import './base.css';
 
@@ -24,3 +25,7 @@ storiesOf('ActiveLink', module)
       </ActiveLink>
     );
   });
+
+storiesOf('Picker', module).add('Default', () => {
+  return <Picker options={['selection 1', 'selection 2']} />;
+});
