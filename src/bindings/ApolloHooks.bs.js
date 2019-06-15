@@ -4,31 +4,11 @@ import * as Block from "bs-platform/lib/es6/block.js";
 import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
-import * as GraphqlHooks from "graphql-hooks";
-import * as GraphqlHooksMemcache from "graphql-hooks-memcache";
-
-var MemCache = /* module */[];
-
-function createMemCache(initialState) {
-  return GraphqlHooksMemcache.default({
-              initialState: initialState
-            });
-}
-
-var Client = /* module */[];
-
-function createClient(url, cache) {
-  return new GraphqlHooks.GraphQLClient({
-              url: url,
-              cache: cache
-            });
-}
-
-var provider = GraphqlHooks.ClientContext.Provider;
-
-var Provider = /* module */[/* provider */provider];
+import * as GraphqlTag from "graphql-tag";
+import * as ReactHooks from "@apollo/react-hooks";
 
 function useQuery(query) {
+  var graphqlQueryAST = GraphqlTag.default(query.query);
   var options = Js_dict.fromList(/* :: */[
         /* tuple */[
           "variables",
@@ -36,7 +16,7 @@ function useQuery(query) {
         ],
         /* [] */0
       ]);
-  var result = GraphqlHooks.useQuery(query.query, options);
+  var result = ReactHooks.useQuery(graphqlQueryAST, options);
   var match = result.loading;
   var match$1 = result.error;
   var match$2 = result.data;
@@ -50,12 +30,7 @@ function useQuery(query) {
 }
 
 export {
-  MemCache ,
-  createMemCache ,
-  Client ,
-  createClient ,
-  Provider ,
   useQuery ,
   
 }
-/* provider Not a pure module */
+/* graphql-tag Not a pure module */

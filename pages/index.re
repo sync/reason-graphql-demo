@@ -16,12 +16,12 @@ query GetSubreddit($name: String!) {
 [@react.component]
 let make = () => {
   let query = SubredditQuery.make(~name="reactjs", ());
-  let result = GraphqlHooks.useQuery(~query);
+  let result = ApolloHooks.useQuery(~query);
 
   switch (result) {
-  | GraphqlHooks.Loading => <div> {ste("Loading")} </div>
-  | GraphqlHooks.Error(message) => <div> {ste(message)} </div>
-  | GraphqlHooks.Data(response) =>
+  | ApolloHooks.Loading => <div> {ste("Loading")} </div>
+  | ApolloHooks.Error(message) => <div> {ste(message)} </div>
+  | ApolloHooks.Data(response) =>
     switch (response##subreddit) {
     | Some(subreddit) =>
       <ul>
@@ -34,4 +34,5 @@ let make = () => {
   };
 };
 
+[@gentype]
 let default = make;

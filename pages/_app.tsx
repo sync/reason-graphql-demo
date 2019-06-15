@@ -1,16 +1,17 @@
-import App, { Container } from 'next/app';
+import ApolloClient from 'apollo-client';
+import App, { Container, AppContext } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import { ClientContext, GraphQLClient } from 'graphql-hooks';
+import { ApolloProvider } from '@apollo/react-hooks';
+import withApolloClient from '../src/helpers/withApollo';
 import Header from '../src/components/Header.gen';
-import withGraphQLClient from '../src/helpers/withGraphQLClient';
 
-type Props = {
-  graphQLClient: GraphQLClient;
-};
+interface Props extends App {
+  apolloClient: ApolloClient<{}>;
+}
 
 class MyApp extends App<Props> {
-  static async getInitialProps({ Component, ctx }) {
+  static async getInitialProps({ Component, ctx }: AppContext) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -21,7 +22,7 @@ class MyApp extends App<Props> {
   }
 
   render() {
-    const { Component, pageProps, graphQLClient } = this.props;
+    const { Component, pageProps, apolloClient } = this.props;
 
     return (
       <Container>
@@ -33,13 +34,13 @@ class MyApp extends App<Props> {
           <title>Reddit</title>
         </Head>
 
-        <ClientContext.Provider value={graphQLClient}>
+        <ApolloProvider client={apolloClient}>
           <Header />
           <Component {...pageProps} />
-        </ClientContext.Provider>
+        </ApolloProvider>
       </Container>
     );
   }
 }
 
-export default withGraphQLClient(MyApp);
+export default withApolloClient(MyApp);
