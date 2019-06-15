@@ -34,4 +34,5 @@ let make = () => {
   };
 };
 
+[@gentype]
 let default = make;
