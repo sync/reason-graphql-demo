@@ -3,6 +3,7 @@
 import * as $$Array from "bs-platform/lib/es6/array.js";
 import * as React from "react";
 import * as Js_exn from "bs-platform/lib/es6/js_exn.js";
+import * as Picker from "../src/components/Picker.bs.js";
 import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
 import * as Js_json from "bs-platform/lib/es6/js_json.js";
 import * as ApolloHooks from "../src/bindings/ApolloHooks.bs.js";
@@ -125,18 +126,29 @@ var SubredditQuery = /* module */[
 ];
 
 function Index(Props) {
-  var query = make("reactjs", /* () */0);
+  var match = React.useState((function () {
+          return "reactjs";
+        }));
+  var selectedSubreddit = match[0];
+  var query = make(selectedSubreddit, /* () */0);
   var result = ApolloHooks.useQuery(query);
   if (typeof result === "number") {
     return React.createElement("div", undefined, "Loading");
   } else if (result.tag) {
-    var match = result[0].subreddit;
-    if (match !== undefined) {
-      return React.createElement("ul", undefined, $$Array.map((function (post) {
-                        return React.createElement("li", {
-                                    key: post.id
-                                  }, post.title);
-                      }), Caml_option.valFromOption(match).posts));
+    var match$1 = result[0].subreddit;
+    if (match$1 !== undefined) {
+      return React.createElement("div", undefined, React.createElement(Picker.make, {
+                      options: /* array */[
+                        "reactjs",
+                        "frontend"
+                      ],
+                      value: selectedSubreddit,
+                      onChange: match[1]
+                    }), React.createElement("ul", undefined, $$Array.map((function (post) {
+                            return React.createElement("li", {
+                                        key: post.id
+                                      }, post.title);
+                          }), Caml_option.valFromOption(match$1).posts)));
     } else {
       return React.createElement("div", undefined, "No stories found");
     }

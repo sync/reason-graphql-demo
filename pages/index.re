@@ -15,7 +15,10 @@ query GetSubreddit($name: String!) {
 
 [@react.component]
 let make = () => {
-  let query = SubredditQuery.make(~name="reactjs", ());
+  let (selectedSubreddit, setSelectedSubreddit) =
+    React.useState(() => "reactjs");
+
+  let query = SubredditQuery.make(~name=selectedSubreddit, ());
   let result = ApolloHooks.useQuery(~query);
 
   switch (result) {
@@ -24,11 +27,20 @@ let make = () => {
   | ApolloHooks.Data(response) =>
     switch (response##subreddit) {
     | Some(subreddit) =>
-      <ul>
-        {subreddit##posts
-         |> Array.map(post => <li key={post##id}> {post##title |> ste} </li>)
-         |> ReasonReact.array}
-      </ul>
+      <div>
+        <Picker
+          value=selectedSubreddit
+          onChange=setSelectedSubreddit
+          options=[|"reactjs", "frontend"|]
+        />
+        <ul>
+          {subreddit##posts
+           |> Array.map(post =>
+                <li key={post##id}> {post##title |> ste} </li>
+              )
+           |> ReasonReact.array}
+        </ul>
+      </div>
     | _ => <div> {"No stories found" |> ste} </div>
     }
   };
