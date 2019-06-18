@@ -42,7 +42,7 @@
     "@apollo/react-common": "0.1.0-beta.6",
     "@apollo/react-hooks": "0.1.0-beta.8",
     "apollo-cache-hermes": "0.8.9",
-    "apollo-client": "2.6.2",
+    "apollo-client": "2.6.3",
     "apollo-link": "1.2.12",
     "apollo-link-error": "1.1.11",
     "apollo-link-http": "1.5.15",
