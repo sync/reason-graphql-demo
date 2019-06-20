@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "apollo-datasource-rest": "0.5.0",
-    "apollo-server": "2.6.3",
+    "apollo-server": "2.6.4",
     "graphql": "14.3.1"
   },
   "devDependencies": {
