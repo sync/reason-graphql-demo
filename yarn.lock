@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/react-common@0.1.0-beta.7":
+"@apollo/react-common@0.1.0-beta.7", "@apollo/react-common@^0.1.0-beta.7":
   version "0.1.0-beta.7"
   resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.7.tgz#0c4714d59ef4c1784bfdb9ee212d9072c438a65d"
   integrity sha512-giUNZdJvSWHVj9e3jg3VIVINjQqquLTRiREc3Th6+FC1mrVO5L4SmoHyUdhqTVsvzoY4xnOQK3px5YOxCbgu3Q==
@@ -10,23 +10,15 @@
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
 
-"@apollo/react-common@^0.1.0-beta.6":
-  version "0.1.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.6.tgz#56537a4299175bddd715f1871d13b0bd9a1c4c9e"
-  integrity sha512-njdtqmCT2tAXtSllJEUVkolujztYzMQaHeXWpbS7G5lTOTvZnkotMV5Ghp2xSerl/qZgG3m3M1exFoniS3HHjg==
+"@apollo/react-hooks@0.1.0-beta.9":
+  version "0.1.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.9.tgz#098965e8b675dc57af07d2f2d901a1029b6e1481"
+  integrity sha512-uwx2NfHTK2fcZyx3JOprS9Ra0CMG95RH8xGgBJ9asTvGu+pofgqKX60KvxG6HtHXg/YIVVnrB8Nq6B+YOl6EYg==
   dependencies:
-    ts-invariant "^0.4.2"
-    tslib "^1.9.3"
-
-"@apollo/react-hooks@0.1.0-beta.8":
-  version "0.1.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.8.tgz#597356a8a6eb953f6d8190ae195f08e896fa9e7e"
-  integrity sha512-SnXGDdrrJTJS6vAL9zwqRdSB+jJtIqVJ+tozztK3aU0K6PU30JXHc+DK8FaK49gJVMrD7Jbb5Eo8r1+YK2UCFA==
-  dependencies:
-    "@apollo/react-common" "^0.1.0-beta.6"
+    "@apollo/react-common" "^0.1.0-beta.7"
     apollo-utilities "^1.3.2"
-    ts-invariant "^0.4.2"
-    tslib "^1.9.3"
+    ts-invariant "^0.4.4"
+    tslib "^1.10.0"
 
 "@apollographql/apollo-tools@^0.3.6":
   version "0.3.7"
@@ -12824,7 +12816,7 @@ ts-invariant@^0.3.2:
   dependencies:
     tslib "^1.9.3"
 
-ts-invariant@^0.4.0, ts-invariant@^0.4.2, ts-invariant@^0.4.4:
+ts-invariant@^0.4.0, ts-invariant@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.4.4.tgz#97a523518688f93aafad01b0e80eb803eb2abd86"
   integrity sha512-uEtWkFM/sdZvRNNDL3Ehu4WVpwaulhwQszV8mrtcdeE8nN00BV9mAmQ88RkrBhFgl9gMgvjJLAQcZbnPXI9mlA==
