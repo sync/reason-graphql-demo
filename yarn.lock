@@ -2,7 +2,15 @@
 # yarn lockfile v1
 
 
-"@apollo/react-common@0.1.0-beta.7", "@apollo/react-common@^0.1.0-beta.7":
+"@apollo/react-common@0.1.0-beta.8":
+  version "0.1.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.8.tgz#98978b0da1a12b5866655295dc46e8a8eaa33ea2"
+  integrity sha512-iNxF9gxxwe9oeovx8XgqU+2J5cOB3RnoSvIfahW2vhJrxtAahWg0AjTTvhQsnLi5OvIiVyivvU+R7xlj/9C0pg==
+  dependencies:
+    ts-invariant "^0.4.4"
+    tslib "^1.10.0"
+
+"@apollo/react-common@^0.1.0-beta.7":
   version "0.1.0-beta.7"
   resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.7.tgz#0c4714d59ef4c1784bfdb9ee212d9072c438a65d"
   integrity sha512-giUNZdJvSWHVj9e3jg3VIVINjQqquLTRiREc3Th6+FC1mrVO5L4SmoHyUdhqTVsvzoY4xnOQK3px5YOxCbgu3Q==
