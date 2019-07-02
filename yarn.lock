@@ -2642,10 +2642,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zeit/ncc@0.20.3":
-  version "0.20.3"
-  resolved "https://registry.yarnpkg.com/@zeit/ncc/-/ncc-0.20.3.tgz#5c4a9ed670d88cd37d8fdb1960d693b2a045149c"
-  integrity sha512-RhVHc89FpEDOwPqLYwKgZlqt8BgI1VLlIwp+DgBonD4BcYYawcS+taRS2njkL62aG1c6WJIihRwERqH8YUQd5g==
+"@zeit/ncc@0.20.4":
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/@zeit/ncc/-/ncc-0.20.4.tgz#00f0a25a88cac3712af4ba66561d9e281c6f05c9"
+  integrity sha512-fmq+F/QxPec+k/zvT7HiVpk7oiGFseS6brfT/AYqmCUp6QFRK7vZf2Ref46MImsg/g2W3g5X6SRvGRmOAvEfdA==
 
 "@zeit/next-css@1.0.1":
   version "1.0.1"
