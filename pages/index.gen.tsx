@@ -5,6 +5,6 @@
 // tslint:disable-next-line:no-var-requires
 const indexBS = require('./index.bs');
 
-export const $$default: (_1:{}) => JSX.Element = indexBS.default;
+export const $$default: React.FC<{}> = indexBS.default;
 
 export default $$default;
