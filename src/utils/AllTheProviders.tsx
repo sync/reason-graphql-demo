@@ -4,7 +4,7 @@ import ApolloProvider from './ApolloProvider';
 
 const AllTheProviders = ({ children }) => {
   return (
-    <RouterProvider router={{ pathname: '/' }}>
+    <RouterProvider>
       <ApolloProvider>{children}</ApolloProvider>
     </RouterProvider>
   );
