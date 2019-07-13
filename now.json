@@ -8,7 +8,7 @@
     { "src": "/static/*", "use": "@now/static" },
     {
       "src": "packages/api/index.ts",
-      "use": "@now/node-server"
+      "use": "@now/node"
     },
     { "src": "next.config.js", "use": "@now/next" }
   ],
