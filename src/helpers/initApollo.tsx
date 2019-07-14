@@ -13,14 +13,9 @@ if (!process.browser) {
   global.fetch = fetch;
 }
 
-function create(host: string, initialState: object | null) {
-  const url =
-    process.env.NODE_ENV === 'production'
-      ? `https://${host}`
-      : 'http://localhost:3000';
-
+function create(baseUrl: string, initialState: object | null) {
   const httpLink = createHttpLink({
-    uri: `${url}/graphql`,
+    uri: `${baseUrl}/api/graphql`,
     credentials: 'same-origin',
   });
 
@@ -60,16 +55,19 @@ function create(host: string, initialState: object | null) {
   });
 }
 
-export default function initApollo(host: string, initialState: object | null) {
+export default function initApollo(
+  baseUrl: string,
+  initialState: object | null,
+) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) {
-    return create(host, initialState);
+    return create(baseUrl, initialState);
   }
 
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = create(host, initialState);
+    apolloClient = create(baseUrl, initialState);
   }
 
   return apolloClient;

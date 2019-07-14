@@ -14,10 +14,11 @@
     "clean": "bsb -clean-world",
     "dev": "run-p -c dev:*",
     "dev:reason": "bsb -make-world -w",
-    "dev:now": "now dev",
+    "dev:now": "next dev",
     "build": "yarn clean && yarn build:reason && yarn build:next",
     "build:reason": "bsb -make-world",
     "build:next": "next build",
+    "start": "DISABLE_SERVERLESS=true NODE_ENV=production next start",
     "now-build": "yarn build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,html,graphql}\"",
     "lint": "run-p -c lint:*",
@@ -32,10 +33,11 @@
     "storybook:start": "start-storybook -p 6006",
     "build-storybook": "yarn build:reason && build-storybook",
     "snapshot-ui": "build-storybook && percy-storybook --widths=320,1280",
+    "e2e": "DISABLE_SERVERLESS=true yarn build && yarn --cwd packages/e2e jest",
     "deploy": "scripts/deploy-ci.sh",
     "deploy:production": "now --token $NOW_TOKEN --target production",
     "deploy:staging": "now --token $NOW_TOKEN --target staging",
-    "update-graphql-schema": "yarn send-introspection-query http://localhost:3000/graphql"
+    "update-graphql-schema": "yarn send-introspection-query http://localhost:3000/api/graphql"
   },
   "license": "ISC",
   "dependencies": {
@@ -46,6 +48,7 @@
     "apollo-link": "1.2.12",
     "apollo-link-error": "1.1.11",
     "apollo-link-http": "1.5.15",
+    "apollo-server-micro": "2.7.2",
     "apollo-utilities": "1.3.2",
     "clsx": "1.0.4",
     "graphql": "14.4.2",

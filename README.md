@@ -41,7 +41,7 @@ $ yarn (install)
 $ yarn dev
 ```
 
-After doing this, you'll have a server with hot-reloading running at [http://localhost:3000](http://localhost:3000) and a graphql server running at [http://localhost:3000/graphql](http://localhost:3000/graphql).
+After doing this, you'll have a server with hot-reloading running at [http://localhost:3000](http://localhost:3000) and a graphql server running at [http://localhost:3000/api/graphql](http://localhost:3000/api/graphql).
 
 ## When changing the graphql server schema
 
@@ -74,6 +74,16 @@ $ yarn ci
 ## Troubleshooting
 
 If you have any issue while running this sample app, open an issue or often just running `yarn clean && yarn build:reason` will help resolve issues.
+
+## End to End tests
+
+The end to end tests use the provided samples input and output. Please check `e2e/basic.test.tsx` for more details.
+
+If you want to see it running locally visually (not headless) go change `packages/e2e/jest-puppeteer.config.js` and set `headless: false`.
+
+```sh
+$ yarn e2e
+```
 
 ## Storybook
 
