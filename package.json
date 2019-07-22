@@ -83,7 +83,7 @@
     "bs-platform": "5.0.6",
     "eslint": "6.1.0",
     "eslint-config-prettier": "6.0.0",
-    "eslint-plugin-jest": "22.13.4",
+    "eslint-plugin-jest": "22.13.5",
     "eslint-plugin-react": "7.14.2",
     "gentype": "2.32.0",
     "graphql_ppx": "0.2.8",
