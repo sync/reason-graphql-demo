@@ -1,0 +1,30 @@
+{
+  "name": "@dblechoc/e2e",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "start": "yarn --cwd ../../ start"
+  },
+  "devDependencies": {
+    "graphql-request": "1.8.2",
+    "jest": "24.8.0",
+    "jest-puppeteer": "4.3.0",
+    "puppeteer": "1.19.0"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  }
+}

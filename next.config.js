@@ -4,13 +4,16 @@ const withCSS = require('@zeit/next-css');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const isProd = process.env.NODE_ENV === 'production';
+const disableServerless = Boolean(process.env.DISABLE_SERVERLESS);
+
+const baseTarget = disableServerless ? {} : { target: 'serverless' };
 
 const config = {
   env: {
     isDev,
     isProd,
   },
-  target: 'serverless',
+  ...baseTarget,
   crossOrigin: 'anonymous',
   webpack: config => {
     const rules = config.module.rules;

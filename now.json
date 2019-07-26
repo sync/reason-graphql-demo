@@ -6,10 +6,6 @@
   "regions": ["all"],
   "builds": [
     { "src": "/static/*", "use": "@now/static" },
-    {
-      "src": "packages/api/index.ts",
-      "use": "@now/node"
-    },
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
@@ -21,10 +17,6 @@
         "cache-control": "public, max-age=43200, immutable",
         "Service-Worker-Allowed": "/"
       }
-    },
-    {
-      "src": "/graphql",
-      "dest": "/packages/api/index.ts"
     },
     { "src": "/(.*)", "dest": "/$1" }
   ]

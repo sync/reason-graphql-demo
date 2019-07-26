@@ -3,6 +3,8 @@ workflow "Build, Test, and Publish" {
   resolves = [
     "Install",
     "Test",
+    "Snapshot UI",
+    "End to End",
     "Deploy"
   ]
 }
@@ -18,9 +20,22 @@ action "Test" {
   args = "ci"
 }
 
-action "Deploy" {
+action "Snapshot UI" {
   uses = "./workflows/action-puppeteer/"
   needs = ["Test"]
+  args = "snapshot-ui"
+  secrets = ["PERCY_TOKEN"]
+}
+
+action "End to End" {
+  uses = "./workflows/action-puppeteer/"
+  needs = ["Test"]
+  args = "e2e"
+}
+
+action "Deploy" {
+  uses = "./workflows/action-puppeteer/"
+  needs = ["Test", "Snapshot UI", "End to End"]
   args = "deploy"
   secrets = ["NOW_TOKEN"]
 }

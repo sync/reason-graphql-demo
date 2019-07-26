@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { AppContext } from 'next/app';
 import React from 'react';
 import { getDataFromTree } from '@apollo/react-hooks';
 import initApollo from './initApollo';
@@ -8,19 +9,27 @@ export interface Props {
   apolloState: {
     data: object | null;
   };
-  host: string;
+  baseUrl: string;
 }
 
 export default (App: any) =>
   class Apollo extends React.Component<Props> {
     static displayName = 'withApollo(App)';
 
-    static async getInitialProps(props) {
-      const { Component, router, ctx } = props;
+    static async getInitialProps(props: AppContext) {
+      const {
+        Component,
+        router,
+        ctx: { req },
+      } = props;
 
-      const host = process.browser
-        ? window.location.host
-        : ctx.req.headers.host;
+      function getBaseUrl(req) {
+        const protocol = req.headers['x-forwarded-proto'] || 'http';
+        const host = req.headers['x-forwarded-host'] || req.headers.host;
+        return `${protocol}://${host}`;
+      }
+
+      const baseUrl = req ? getBaseUrl(req) : '';
 
       let appProps = {};
       if (App.getInitialProps) {
@@ -31,7 +40,7 @@ export default (App: any) =>
 
       // Run all GraphQL queries in the component tree
       // and extract the resulting data
-      const apollo = initApollo(host, {});
+      const apollo = initApollo(baseUrl, {});
       try {
         // Run all GraphQL queries
         await getDataFromTree(
@@ -64,7 +73,7 @@ export default (App: any) =>
 
       return {
         ...appProps,
-        host,
+        baseUrl,
         apolloState,
       };
     }
@@ -77,7 +86,7 @@ export default (App: any) =>
       // `getDataFromTree` renders the component first, the client is passed off as a property.
       // After that rendering is done using Next's normal rendering pipeline
       this.apolloClient =
-        props.apolloClient || initApollo(props.host, props.apolloState.data);
+        props.apolloClient || initApollo(props.baseUrl, props.apolloState.data);
     }
 
     render() {
