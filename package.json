@@ -41,8 +41,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@apollo/react-common": "0.1.0-beta.8",
-    "@apollo/react-hooks": "0.1.0-beta.10",
+    "@apollo/react-common": "0.1.0-beta.9",
+    "@apollo/react-hooks": "0.1.0-beta.11",
     "apollo-cache-hermes": "0.8.9",
     "apollo-client": "2.6.3",
     "apollo-link": "1.2.12",
@@ -58,6 +58,7 @@
     "prop-types": "15.7.2",
     "re-classnames": "4.0.0",
     "react": "16.9.0-alpha.0",
+    "react-apollo": "2.5.8",
     "react-dom": "16.9.0-alpha.0",
     "react-pin-input": "0.9.0",
     "reason-react": "0.7.0"
