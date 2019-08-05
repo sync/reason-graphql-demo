@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { AppContext } from 'next/app';
 import React from 'react';
-import { getDataFromTree } from 'react-apollo';
+import { getDataFromTree } from '@apollo/react-ssr';
 import initApollo from './initApollo';
 
 export interface Props {
