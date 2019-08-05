@@ -41,9 +41,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@apollo/react-common": "0.1.0-beta.9",
-    "@apollo/react-hooks": "0.1.0-beta.11",
-    "@apollo/react-ssr": "0.1.0-beta.1",
+    "@apollo/react-common": "0.1.0-beta.10",
+    "@apollo/react-hooks": "0.1.0-beta.12",
+    "@apollo/react-ssr": "0.1.0-beta.2",
     "apollo-cache-hermes": "0.8.9",
     "apollo-client": "2.6.3",
     "apollo-link": "1.2.12",

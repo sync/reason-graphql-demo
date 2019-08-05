@@ -2,31 +2,31 @@
 # yarn lockfile v1
 
 
-"@apollo/react-common@0.1.0-beta.9", "@apollo/react-common@^0.1.0-beta.9":
-  version "0.1.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.9.tgz#33d0a46d049d15e97b2f9f1e9e012c338567c1de"
-  integrity sha512-3/FYW7LilVlhfCkxL26Yglmr1LfWd2z+LEMHvtHF8K54Ejmb8kYglvDfbuAIsGT1f8WagpIkDm7eI1tfTdgNmw==
+"@apollo/react-common@0.1.0-beta.10", "@apollo/react-common@^0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.10.tgz#e01a5345968dbea739ac0604d2647d4300bf8cc2"
+  integrity sha512-P4zrBn1BtPh5h0cCpIaf6FLWJ8CNFNUotGjOOXzzKYWcLsgrGRXBr4zcM0oW44qWoSWyfw/Y5iO2wuw4Tq2LPQ==
   dependencies:
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
 
-"@apollo/react-hooks@0.1.0-beta.11", "@apollo/react-hooks@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.11.tgz#3b12836fb6fd944767757f5c7cb477ba880f6d52"
-  integrity sha512-hcEQWLFLpO2lN6AcXFsO/tK27Ve9+hIpw827fQBCuIbCyy2+e715ZMwrgzY5HCeCvLPY9DcS9I++0etr+f3UXw==
+"@apollo/react-hooks@0.1.0-beta.12", "@apollo/react-hooks@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.12.tgz#caca0faf2183272c86ccf52969b5ff459b280b41"
+  integrity sha512-GQOm88syJ/i+cYNskjlmX2fXgHwA8kqM76tkGhFtlYk+IHMkyjm6iyxuih1jjw76Q6ERUwVKiX86KwW/Gw4giA==
   dependencies:
-    "@apollo/react-common" "^0.1.0-beta.9"
+    "@apollo/react-common" "^0.1.0-beta.10"
     "@wry/equality" "^0.1.9"
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
 
-"@apollo/react-ssr@0.1.0-beta.1":
-  version "0.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@apollo/react-ssr/-/react-ssr-0.1.0-beta.1.tgz#9e4c10f8b7e8e0c30564b0409ca787160fafe924"
-  integrity sha512-09AvAjrk3g3n5X4S5gsGOw2nYDlQ4ep3Qr4bPiQkhFM9IeYGQ6rWSaZIcAJDFL4IwnwdJQtoQDYXB1Muc9nuyw==
+"@apollo/react-ssr@0.1.0-beta.2":
+  version "0.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@apollo/react-ssr/-/react-ssr-0.1.0-beta.2.tgz#cf3e18e5310947460f5e43176eb26bff1741027b"
+  integrity sha512-HoDIN/jf3Uya2q4R7It4pFlgpVEAKBDZR7CHe5A3/XAtCuQEEeo2Q0RqWvMzbnUmGlo+B1WBBDI7GSrfkJUv1Q==
   dependencies:
-    "@apollo/react-common" "^0.1.0-beta.9"
-    "@apollo/react-hooks" "^0.1.0-beta.11"
+    "@apollo/react-common" "^0.1.0-beta.10"
+    "@apollo/react-hooks" "^0.1.0-beta.12"
     tslib "^1.10.0"
 
 "@apollographql/apollo-tools@^0.4.0":
