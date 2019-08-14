@@ -9,7 +9,6 @@ let apolloClient: ApolloClient<{}> | null = null;
 
 // Polyfill fetch() on the server (used by apollo-client)
 if (!process.browser) {
-  // @ts-ignore
   global.fetch = fetch;
 }
 
