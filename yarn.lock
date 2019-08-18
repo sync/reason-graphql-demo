@@ -4334,14 +4334,13 @@ browserslist@^4.6.3:
     electron-to-chromium "^1.3.164"
     node-releases "^1.1.23"
 
-bs-platform@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.1.0.tgz#500192d81c099c3868de002b3129307b4b519e75"
-  integrity sha512-M+1srPZQDAVvWoVf2ZtztlmGyjcv0RHtIv5tRcSmmrdpRf4g15rVvbf8iGz/Rk6jLFPMKZh5damo1P2EiDjKSg==
+bs-platform@5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
+  integrity sha512-6Boa2VEcWJp2WJr38L7bp3J929nYha7gDarjxb070jWzgfPJ/WbzjipmSfnu2eqqk1MfjEIpBipbPz6n1NISwA==
 
 "bs-platform@github:bsansouci/bsb-native#3.2.0":
   version "3.2.0"
-  uid "84604c9f6a5611eed68372efdb575c00a3e72813"
   resolved "https://codeload.github.com/bsansouci/bsb-native/tar.gz/84604c9f6a5611eed68372efdb575c00a3e72813"
   dependencies:
     yauzl "^2.9.1"
@@ -6972,7 +6971,7 @@ get_in_ppx@1.0.2:
   resolved "https://registry.yarnpkg.com/get_in_ppx/-/get_in_ppx-1.0.2.tgz#3c5312167584b88ea4ec3adf0e770ff8decc8e4c"
   integrity sha512-/metJwoWYS0ScPpetIu84ZCj2bvbyLX4Sj4PYqhyr8xYW0E6ju8rXXWL4pbQeOtftAnsP7pYRxsOta6r6q1trA==
   dependencies:
-    bs-platform "github:bsansouci/bsb-native#3.2.0"
+    bs-platform bsansouci/bsb-native#3.2.0
 
 getpass@^0.1.1:
   version "0.1.7"
