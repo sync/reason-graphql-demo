@@ -2,7 +2,7 @@ import React from 'react';
 import { GlobalWithFetchMock } from 'jest-fetch-mock';
 import mockConsole from 'jest-mock-console';
 import { render, waitForElement } from '../../utils/testUtils';
-import Index from '../../../pages/index.gen';
+import { Index } from '../../../pages/index.gen';
 import {
   mockFetchSubredditOnce,
   mockFetchErrorResponseOnce,
@@ -10,7 +10,7 @@ import {
 
 const customGlobal: GlobalWithFetchMock = global as GlobalWithFetchMock;
 
-describe('Space', () => {
+describe('Index', () => {
   beforeEach(() => {
     // eslint-disable-next-line global-require
     customGlobal.fetch = require('jest-fetch-mock');

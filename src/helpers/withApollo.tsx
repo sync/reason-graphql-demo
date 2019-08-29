@@ -1,95 +1,89 @@
+import React, { useMemo } from 'react';
 import Head from 'next/head';
-import { AppContext } from 'next/app';
-import React from 'react';
-import { getDataFromTree } from '@apollo/react-ssr';
-import initApollo from './initApollo';
+import { ApolloProvider } from '@apollo/react-hooks';
+import initApolloClient from './initApollo';
 
-export interface Props {
-  apolloClient: any;
-  apolloState: {
-    data: object | null;
-  };
-  baseUrl: string;
+function getBaseUrl(req: any) {
+  const protocol = req.headers['x-forwarded-proto'] || 'http';
+  const host = req.headers['x-forwarded-host'] || req.headers.host;
+  return `${protocol}://${host}`;
 }
 
-export default (App: any) =>
-  class Apollo extends React.Component<Props> {
-    static displayName = 'withApollo(App)';
+export default function withApollo(PageComponent: any, { ssr = true } = {}) {
+  const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
+    const client = useMemo(
+      () => apolloClient || initApolloClient('', apolloState),
+      [],
+    );
 
-    static async getInitialProps(props: AppContext) {
-      const {
-        Component,
-        router,
-        ctx: { req },
-      } = props;
+    return (
+      <ApolloProvider client={client}>
+        :
+        <PageComponent {...pageProps} />
+      </ApolloProvider>
+    );
+  };
 
-      function getBaseUrl(req) {
-        const protocol = req.headers['x-forwarded-proto'] || 'http';
-        const host = req.headers['x-forwarded-host'] || req.headers.host;
-        return `${protocol}://${host}`;
-      }
+  // Set the correct displayName in development
+  if (process.env.NODE_ENV !== 'production') {
+    const displayName =
+      PageComponent.displayName || PageComponent.name || 'Component';
 
-      const baseUrl = req ? getBaseUrl(req) : '';
+    if (displayName === 'App') {
+      console.warn('This withApollo HOC only works with PageComponents.');
+    }
 
-      let appProps = {};
-      if (App.getInitialProps) {
-        appProps = await App.getInitialProps(props);
-      }
+    WithApollo.displayName = `withApollo(${displayName})`;
+  }
 
-      const apolloState: { data?: any } = {};
+  // Allow Next.js to remove getInitialProps from the browser build
+  if (typeof window === 'undefined') {
+    if (ssr) {
+      WithApollo.getInitialProps = async (ctx: any) => {
+        const { AppTree, req } = ctx;
 
-      // Run all GraphQL queries in the component tree
-      // and extract the resulting data
-      const apollo = initApollo(baseUrl, {});
-      try {
-        // Run all GraphQL queries
-        await getDataFromTree(
-          <App
-            {...appProps}
-            Component={Component}
-            router={router}
-            apolloState={apolloState}
-            apolloClient={apollo}
-          />,
-        );
-      } catch (error) {
-        // Prevent Apollo Client GraphQL errors from crashing SSR.
-        // Handle them in components via the data.error prop:
-        // http://dev.apollodata.com/react/api-queries.html#graphql-query-data-error
-        // eslint-disable-next-line no-console
-        console.error('Error while running `getInitialState`', error);
-      }
+        let pageProps = {};
+        if (PageComponent.getInitialProps) {
+          pageProps = await PageComponent.getInitialProps(ctx);
+        }
 
-      if (!process.browser) {
+        const baseUrl = getBaseUrl(req);
+
+        // Run all GraphQL queries in the component tree
+        // and extract the resulting data
+        const apolloClient = initApolloClient(baseUrl, {});
+
+        try {
+          // Run all GraphQL queries
+          await require('@apollo/react-ssr').getDataFromTree(
+            <AppTree
+              pageProps={{
+                ...pageProps,
+                apolloClient,
+              }}
+            />,
+          );
+        } catch (error) {
+          // Prevent Apollo Client GraphQL errors from crashing SSR.
+          // Handle them in components via the data.error prop:
+          // https://www.apollographql.com/docs/react/api/react-apollo.html#graphql-query-data-error
+          console.error('Error while running `getDataFromTree`', error);
+        }
+
         // getDataFromTree does not call componentWillUnmount
         // head side effect therefore need to be cleared manually
         Head.rewind();
-      }
 
-      // Extract query data from the Apollo store
-      if (apollo) {
-        apolloState.data = apollo.cache.extract();
-      }
+        // Extract query data from the Apollo store
+        const apolloState = apolloClient.cache.extract();
 
-      return {
-        ...appProps,
-        baseUrl,
-        apolloState,
+        return {
+          ...pageProps,
+          apolloState,
+        };
       };
     }
+  }
 
-    apolloClient: any;
-
-    constructor(props: Props) {
-      super(props);
-
-      // `getDataFromTree` renders the component first, the client is passed off as a property.
-      // After that rendering is done using Next's normal rendering pipeline
-      this.apolloClient =
-        props.apolloClient || initApollo(props.baseUrl, props.apolloState.data);
-    }
-
-    render() {
-      return <App {...this.props} apolloClient={this.apolloClient} />;
-    }
-  };
+  return WithApollo;
+}
