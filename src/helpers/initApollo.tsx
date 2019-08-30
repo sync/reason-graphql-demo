@@ -7,15 +7,16 @@ import fetch from 'isomorphic-fetch';
 
 let apolloClient: ApolloClient<{}> | null = null;
 
-// Polyfill fetch() on the server (used by apollo-client)
-if (!process.browser) {
-  global.fetch = fetch;
-}
-
-function create(baseUrl: string, initialState: object | null) {
+export function createApolloClient(
+  baseUrl: string,
+  initialState: object | null,
+) {
+  const isBrowser = typeof window !== 'undefined';
   const httpLink = createHttpLink({
     uri: `${baseUrl}/api/graphql`,
     credentials: 'same-origin',
+    // Use fetch() polyfill on the server
+    fetch: !isBrowser && fetch,
   });
 
   const errorLink = onError(({ graphQLErrors, networkError }) => {
@@ -39,8 +40,8 @@ function create(baseUrl: string, initialState: object | null) {
 
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   return new ApolloClient({
-    connectToDevTools: process.browser,
-    ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
+    connectToDevTools: isBrowser,
+    ssrMode: !isBrowser, // Disables forceFetch on the server (so queries are only run once)
     link: allLink,
     cache: new Hermes({
       resolverRedirects: {
@@ -54,19 +55,19 @@ function create(baseUrl: string, initialState: object | null) {
   });
 }
 
-export default function initApollo(
+export default function initApolloClient(
   baseUrl: string,
   initialState: object | null,
 ) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
-  if (!process.browser) {
-    return create(baseUrl, initialState);
+  if (typeof window === 'undefined') {
+    return createApolloClient(baseUrl, initialState);
   }
 
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = create(baseUrl, initialState);
+    apolloClient = createApolloClient(baseUrl, initialState);
   }
 
   return apolloClient;

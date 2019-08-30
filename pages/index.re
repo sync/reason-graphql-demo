@@ -34,5 +34,8 @@ let make = () => {
   };
 };
 
+[@genType "Index"]
+let index = make;
+
 [@gentype]
-let default = make;
+let default = Next.Apollo.withApollo(make);
