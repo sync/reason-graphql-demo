@@ -30,50 +30,48 @@ function parse(value) {
         var tmp$1;
         if (match$3 !== undefined) {
           var match$4 = Js_dict.get(Caml_option.valFromOption(match$3), "posts");
-          var tmp$2;
+          var field_posts;
           if (match$4 !== undefined) {
             var value$2 = Caml_option.valFromOption(match$4);
             var match$5 = Js_json.decodeArray(value$2);
-            tmp$2 = match$5 !== undefined ? match$5.map((function (value) {
+            field_posts = match$5 !== undefined ? match$5.map((function (value) {
                       var match = Js_json.decodeObject(value);
                       if (match !== undefined) {
                         var value$1 = Caml_option.valFromOption(match);
                         var match$1 = Js_dict.get(value$1, "id");
-                        var tmp;
+                        var field_id;
                         if (match$1 !== undefined) {
                           var value$2 = Caml_option.valFromOption(match$1);
                           var match$2 = Js_json.decodeString(value$2);
-                          tmp = match$2 !== undefined ? match$2 : Js_exn.raiseError("graphql_ppx: Expected string, got " + JSON.stringify(value$2));
+                          field_id = match$2 !== undefined ? match$2 : Js_exn.raiseError("graphql_ppx: Expected string, got " + JSON.stringify(value$2));
                         } else {
-                          tmp = Js_exn.raiseError("graphql_ppx: Field id on type Post is missing");
+                          field_id = Js_exn.raiseError("graphql_ppx: Field id on type Post is missing");
                         }
                         var match$3 = Js_dict.get(value$1, "title");
-                        var tmp$1;
+                        var field_title;
                         if (match$3 !== undefined) {
                           var value$3 = Caml_option.valFromOption(match$3);
                           var match$4 = Js_json.decodeString(value$3);
-                          tmp$1 = match$4 !== undefined ? match$4 : Js_exn.raiseError("graphql_ppx: Expected string, got " + JSON.stringify(value$3));
+                          field_title = match$4 !== undefined ? match$4 : Js_exn.raiseError("graphql_ppx: Expected string, got " + JSON.stringify(value$3));
                         } else {
-                          tmp$1 = Js_exn.raiseError("graphql_ppx: Field title on type Post is missing");
+                          field_title = Js_exn.raiseError("graphql_ppx: Field title on type Post is missing");
                         }
-                        return {
-                                id: tmp,
-                                title: tmp$1
-                              };
+                        return /* record */[
+                                /* id */field_id,
+                                /* title */field_title
+                              ];
                       } else {
-                        return Js_exn.raiseError("graphql_ppx: Object is not a value");
+                        return Js_exn.raiseError("graphql_ppx: Expected object of type Post, got " + JSON.stringify(value));
                       }
                     })) : Js_exn.raiseError("graphql_ppx: Expected array, got " + JSON.stringify(value$2));
           } else {
-            tmp$2 = Js_exn.raiseError("graphql_ppx: Field posts on type Subreddit is missing");
+            field_posts = Js_exn.raiseError("graphql_ppx: Field posts on type Subreddit is missing");
           }
-          tmp$1 = {
-            posts: tmp$2
-          };
+          tmp$1 = /* record */[/* posts */field_posts];
         } else {
-          tmp$1 = Js_exn.raiseError("graphql_ppx: Object is not a value");
+          tmp$1 = Js_exn.raiseError("graphql_ppx: Expected object of type Subreddit, got " + JSON.stringify(value$1));
         }
-        tmp = Caml_option.some(tmp$1);
+        tmp = tmp$1;
       }
     } else {
       tmp = undefined;
@@ -135,9 +133,9 @@ function Index(Props) {
     if (match !== undefined) {
       return React.createElement("ul", undefined, $$Array.map((function (post) {
                         return React.createElement("li", {
-                                    key: post.id
-                                  }, post.title);
-                      }), Caml_option.valFromOption(match).posts));
+                                    key: post[/* id */0]
+                                  }, post[/* title */1]);
+                      }), match[/* posts */0]));
     } else {
       return React.createElement("div", undefined, "No stories found");
     }
