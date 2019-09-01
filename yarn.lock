@@ -1404,6 +1404,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@dblechoc/bs-next@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.13.0.tgz#8aa9ee2f034f7cdb543017c8df39429e72c1ff2c"
+  integrity sha512-HW6OkrviBwVdDGWJ7VP3MmKMuixtsUwkZZamz0IVcjnFeESlZUkQJtnxF+7RtP2Z19ISKi/wA6OWjBAcRzJ4vQ==
+
 "@emotion/cache@^10.0.9":
   version "10.0.9"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.9.tgz#e0c7b7a289f7530edcfad4dcf3858bd2e5700a6f"
@@ -4339,7 +4344,6 @@ bs-platform@5.0.6:
 
 bs-platform@bsansouci/bsb-native#3.2.0:
   version "3.2.0"
-  uid "84604c9f6a5611eed68372efdb575c00a3e72813"
   resolved "https://codeload.github.com/bsansouci/bsb-native/tar.gz/84604c9f6a5611eed68372efdb575c00a3e72813"
   dependencies:
     yauzl "^2.9.1"

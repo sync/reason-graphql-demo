@@ -2,14 +2,6 @@
 
 import * as WithApollo from "../helpers/withApollo";
 
-var Link = /* module */[];
-
-var Head = /* module */[];
-
-var $$Error = /* module */[];
-
-var Router = /* module */[];
-
 function withApollo(prim) {
   return WithApollo.default(prim);
 }
@@ -17,10 +9,6 @@ function withApollo(prim) {
 var Apollo = /* module */[/* withApollo */withApollo];
 
 export {
-  Link ,
-  Head ,
-  $$Error ,
-  Router ,
   Apollo ,
   
 }

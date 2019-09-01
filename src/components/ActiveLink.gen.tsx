@@ -5,7 +5,7 @@
 // tslint:disable-next-line:no-var-requires
 const ActiveLinkBS = require('./ActiveLink.bs');
 
-import {Router_t as Next_Router_t} from '../../src/bindings/Next.gen';
+import {Router_t as Next_Router_t} from '../../src/shims/Next.shim';
 
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {
