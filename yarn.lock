@@ -1404,10 +1404,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@dblechoc/bs-next@0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.13.0.tgz#8aa9ee2f034f7cdb543017c8df39429e72c1ff2c"
-  integrity sha512-HW6OkrviBwVdDGWJ7VP3MmKMuixtsUwkZZamz0IVcjnFeESlZUkQJtnxF+7RtP2Z19ISKi/wA6OWjBAcRzJ4vQ==
+"@dblechoc/bs-next@0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.14.0.tgz#e75996f629b91c2170884dbd4d5f779ca8551d17"
+  integrity sha512-VNv42uSkpHpdE4UlrNdMlCTD7ct4Kju9EE6nvXhaHkvuf58tigPllVbSmOU0j0MZT/cADBfucOCOtFzT2U0zXQ==
 
 "@emotion/cache@^10.0.9":
   version "10.0.9"
