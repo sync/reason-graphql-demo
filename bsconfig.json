@@ -10,7 +10,7 @@
       "subdirs": true
     }
   ],
-  "bs-dependencies": ["reason-react", "re-classnames"],
+  "bs-dependencies": ["reason-react", "re-classnames", "@dblechoc/bs-next"],
   "reason": { "react-jsx": 3 },
   "package-specs": {
     "module": "es6",
@@ -33,7 +33,8 @@
       "React": "ReactShim",
       "ReactEvent": "ReactEvent",
       "ReasonPervasives": "ReasonPervasives",
-      "ReasonReact": "ReactShim"
+      "ReasonReact": "ReactShim",
+      "Next": "Next"
     },
     "debug": {
       "all": false,

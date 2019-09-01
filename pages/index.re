@@ -45,4 +45,4 @@ let make = () => {
 let index = make;
 
 [@gentype]
-let default = Next.Apollo.withApollo(make);
+let default = Hoc.Apollo.withApollo(make);
