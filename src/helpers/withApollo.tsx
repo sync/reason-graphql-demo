@@ -18,7 +18,6 @@ export default function withApollo(PageComponent: any, { ssr = true } = {}) {
 
     return (
       <ApolloProvider client={client}>
-        :
         <PageComponent {...pageProps} />
       </ApolloProvider>
     );
