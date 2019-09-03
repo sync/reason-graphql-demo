@@ -52,7 +52,7 @@ describe('Index', () => {
 
     const { getByText } = render(<Index />);
 
-    await waitForElement(() => getByText('something is wrong'));
+    await waitForElement(() => getByText(`Network error: ${message}`));
 
     // eslint-disable-next-line no-console
     expect(console.log).toHaveBeenCalledWith(

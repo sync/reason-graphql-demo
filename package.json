@@ -44,6 +44,7 @@
     "@apollo/react-common": "3.0.1",
     "@apollo/react-hooks": "3.0.1",
     "@apollo/react-ssr": "3.0.1",
+    "@dblechoc/bs-apollo": "0.3.0",
     "@dblechoc/bs-next": "0.14.0",
     "apollo-cache-hermes": "0.8.9",
     "apollo-client": "2.6.4",
