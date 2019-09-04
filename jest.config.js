@@ -11,7 +11,9 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
-  transformIgnorePatterns: ['/node_modules/(?!(bs-platform|re-classnames)/)'],
+  transformIgnorePatterns: [
+    '/node_modules/(?!(bs-platform|re-classnames|@dblechoc/bs-apollo|@dblechoc/bs-next)/)',
+  ],
   testRegex: '/__tests__/.*\\.(js|jsx|ts|tsx)$',
   testPathIgnorePatterns: [
     '<rootDir>/dist/',

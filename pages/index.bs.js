@@ -6,7 +6,7 @@ import * as React from "react";
 import * as Js_exn from "bs-platform/lib/es6/js_exn.js";
 import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
 import * as Js_json from "bs-platform/lib/es6/js_json.js";
-import * as ApolloHooks from "../src/bindings/ApolloHooks.bs.js";
+import * as ApolloHooks from "@dblechoc/bs-apollo/src/ApolloHooks.bs.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 
 function ste(prim) {

@@ -1404,6 +1404,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@dblechoc/bs-apollo@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@dblechoc/bs-apollo/-/bs-apollo-0.3.0.tgz#48c5a21999805571c57a4dc66ba766663aec9538"
+  integrity sha512-eqOiVJmm70XiCP3rc9+Smsqi0vMb690h1TfhpcKdWHFCRivvyUbiwaQbdnttrvLFnU3+cFtNvyiKytLBtpmjPA==
+
 "@dblechoc/bs-next@0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.14.0.tgz#e75996f629b91c2170884dbd4d5f779ca8551d17"
