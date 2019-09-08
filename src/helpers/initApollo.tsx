@@ -16,7 +16,7 @@ export function createApolloClient(
     uri: `${baseUrl}/api/graphql`,
     credentials: 'same-origin',
     // Use fetch() polyfill on the server
-    fetch: !isBrowser && fetch,
+    fetch: isBrowser ? undefined : fetch,
   });
 
   const errorLink = onError(({ graphQLErrors, networkError }) => {
