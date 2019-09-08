@@ -13,6 +13,7 @@ Ultra high performance progressive web application built with React + Reason (wi
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&category=Best%20Practices)](https://github.com/ebidel/lighthouse-badge)
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&category=SEO)](https://github.com/ebidel/lighthouse-badge)
 
+![This project is use Github Actions for testing.](https://github.com/sync/reason-graphql-demo/workflows/Main%20workflow/badge.svg)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Dblechoc/reason-graphql-demo)
 
 ## Features
