@@ -3,6 +3,7 @@
 Originated from: https://github.com/peggyrayzis/redux-to-graphql
 
 [View the application](https://reason-graphql-demo.now.sh/)
+[Go to a specific reddit](https://reason-graphql-demo.now.sh/subreddit/vim)
 
 Ultra high performance progressive web application built with React + Reason (with hooks) and Next.js.
 
