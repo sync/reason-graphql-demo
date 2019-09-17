@@ -1465,10 +1465,10 @@
   resolved "https://registry.yarnpkg.com/@dblechoc/bs-apollo/-/bs-apollo-0.4.0.tgz#b668fca3803bfb57a09ee049746a11eeb9e18733"
   integrity sha512-DQdG8jxnfBNFXnAYFC8ikAhSQROi5nybZsX2qtT1yzJLE3dDYOK269fiA2RACB341IDGt2TVXwJXMRblso29yg==
 
-"@dblechoc/bs-next@0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.14.0.tgz#e75996f629b91c2170884dbd4d5f779ca8551d17"
-  integrity sha512-VNv42uSkpHpdE4UlrNdMlCTD7ct4Kju9EE6nvXhaHkvuf58tigPllVbSmOU0j0MZT/cADBfucOCOtFzT2U0zXQ==
+"@dblechoc/bs-next@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@dblechoc/bs-next/-/bs-next-0.15.0.tgz#dae65026a87606f01a508025348d34bf552f10d7"
+  integrity sha512-egzZLgwz64sVgbRU7zsSaCcSlJpA8M5vbOnIs3hebTKxaf4e9gnRHPh2SYjPZQG0/M6+7qnS0HUT4W8lNGrBJA==
 
 "@emotion/cache@^10.0.17":
   version "10.0.17"
