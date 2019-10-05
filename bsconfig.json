@@ -23,10 +23,10 @@
   },
   "suffix": ".bs.js",
   "bsc-flags": ["-bs-super-errors"],
-  "ppx-flags": ["graphql_ppx/ppx", "get_in_ppx/ppx"],
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx", "get_in_ppx/ppx"],
   "refmt": 3,
   "warnings": {
-    "number": "+A-48",
+    "number": "+A-48-102",
     "error": "+A-3-44-102"
   },
   "gentypeconfig": {
