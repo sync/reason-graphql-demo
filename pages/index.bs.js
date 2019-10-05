@@ -5,6 +5,7 @@ import * as React from "react";
 import * as Js_exn from "bs-platform/lib/es6/js_exn.js";
 import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
 import * as Js_json from "bs-platform/lib/es6/js_json.js";
+import * as Caml_obj from "bs-platform/lib/es6/caml_obj.js";
 import * as Subreddit from "../src/components/Subreddit.bs.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 
@@ -87,9 +88,11 @@ function make(name, param) {
   return {
           query: ppx_printed_query,
           variables: Js_dict.fromArray(/* array */[/* tuple */[
-                  "name",
-                  name
-                ]]),
+                    "name",
+                    name
+                  ]].filter((function (param) {
+                      return Caml_obj.caml_notequal(param[1], null);
+                    }))),
           parse: parse
         };
 }
@@ -99,9 +102,11 @@ function makeWithVariables(variables) {
   return {
           query: ppx_printed_query,
           variables: Js_dict.fromArray(/* array */[/* tuple */[
-                  "name",
-                  name
-                ]]),
+                    "name",
+                    name
+                  ]].filter((function (param) {
+                      return Caml_obj.caml_notequal(param[1], null);
+                    }))),
           parse: parse
         };
 }
