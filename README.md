@@ -77,14 +77,15 @@ $ yarn ci
 
 If you have any issue while running this sample app, open an issue or often just running `yarn clean && yarn build:reason` will help resolve issues.
 
-## End to End tests
+## End to end tests
 
-The end to end tests use the provided samples input and output. Please check `e2e/basic.test.tsx` for more details.
+We use cypress. Please check `e2e` for more details.
+If you wan to add a new test use the following command and wait for cypress to open
 
-If you want to see it running locally visually (not headless) go change `packages/e2e/jest-puppeteer.config.js` and set `headless: false`.
-
-```sh
-$ yarn e2e
+```
+yarn e2e-build
+yarn start
+yarn workspace @dblechoc/e2e cypress open
 ```
 
 ## Storybook

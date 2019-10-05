@@ -12,3 +12,8 @@ dist
 .bsb.lock
 .graphql_ppx_cache
 storybook-static
+
+# Cypress
+packages/e2e/cypress.env.json
+packages/e2e/cypress/videos/*
+packages/e2e/cypress/screenshots/*

@@ -8,29 +8,29 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Install
-        uses: ./workflows/action-puppeteer/
+        uses: ./workflows/action-cypress/
         with:
           args: install
 
       - name: Test
-        uses: ./workflows/action-puppeteer/
+        uses: ./workflows/action-cypress/
         with:
           args: ci
 
       - name: Snapshot UI
-        uses: ./workflows/action-puppeteer/
+        uses: ./workflows/action-cypress/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         with:
           args: snapshot-ui
 
       - name: End to End
-        uses: ./workflows/action-puppeteer/
+        uses: ./workflows/action-cypress/
         with:
           args: e2e
 
       - name: Deploy
-        uses: ./workflows/action-puppeteer/
+        uses: ./workflows/action-cypress/
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
         with:

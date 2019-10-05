@@ -11,8 +11,9 @@ module.exports = {
     'prettier/react',
     'prettier/@typescript-eslint',
     'plugin:jest/recommended',
+    'plugin:cypress/recommended',
   ],
-  plugins: ['jest', '@typescript-eslint'],
+  plugins: ['jest', '@typescript-eslint', 'cypress'],
   env: {
     browser: true,
     node: true,
@@ -61,6 +62,6 @@ module.exports = {
     cancelAnimationFrame: true,
     page: true,
     browser: true,
-    jestPuppeteer: true,
+    'cypress/globals': true,
   },
 };
