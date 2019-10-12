@@ -93,7 +93,7 @@
     "eslint": "6.5.1",
     "eslint-config-prettier": "6.4.0",
     "eslint-plugin-cypress": "2.7.0",
-    "eslint-plugin-jest": "22.17.0",
+    "eslint-plugin-jest": "22.19.0",
     "eslint-plugin-react": "7.16.0",
     "gentype": "2.40.1",
     "husky": "3.0.8",
