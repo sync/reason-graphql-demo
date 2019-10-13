@@ -4,10 +4,6 @@
     {
       "dir": "src",
       "subdirs": true
-    },
-    {
-      "dir": "pages",
-      "subdirs": true
     }
   ],
   "bs-dependencies": [
