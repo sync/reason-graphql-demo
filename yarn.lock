@@ -4623,12 +4623,6 @@ bs-platform@5.2.0:
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.2.0.tgz#0ec317273daed573491c105f68ea48826a285b7a"
   integrity sha512-miyePsOF9VbuhT5QD5E/hb+l454Fo4MAcg5xV1GJhbWxmejuF/X7mCYUsNrK1UUAaYt8hnoyFdeLG22sxVta9A==
 
-bs-platform@bsansouci/bsb-native#3.2.0:
-  version "3.2.0"
-  resolved "https://codeload.github.com/bsansouci/bsb-native/tar.gz/84604c9f6a5611eed68372efdb575c00a3e72813"
-  dependencies:
-    yauzl "^2.9.1"
-
 bser@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
@@ -7481,13 +7475,6 @@ get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
-
-get_in_ppx@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/get_in_ppx/-/get_in_ppx-1.0.2.tgz#3c5312167584b88ea4ec3adf0e770ff8decc8e4c"
-  integrity sha512-/metJwoWYS0ScPpetIu84ZCj2bvbyLX4Sj4PYqhyr8xYW0E6ju8rXXWL4pbQeOtftAnsP7pYRxsOta6r6q1trA==
-  dependencies:
-    bs-platform bsansouci/bsb-native#3.2.0
 
 getos@3.1.1:
   version "3.1.1"
@@ -15770,7 +15757,7 @@ yargs@^7.0.2:
     y18n "^3.2.1"
     yargs-parser "^5.0.0"
 
-yauzl@2.10.0, yauzl@^2.9.1:
+yauzl@2.10.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
   integrity sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=

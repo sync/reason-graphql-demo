@@ -1,8 +1,8 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import Subreddit from '../../src/components/Subreddit.gen';
-import withApollo from '../../src/helpers/withApollo';
+import Subreddit from '../../components/Subreddit.gen';
+import withApollo from '../../helpers/withApollo';
 
 const SubredditForName: NextPage = () => {
   const router = useRouter();

@@ -4,10 +4,6 @@
     {
       "dir": "src",
       "subdirs": true
-    },
-    {
-      "dir": "pages",
-      "subdirs": true
     }
   ],
   "bs-dependencies": [
@@ -23,7 +19,7 @@
   },
   "suffix": ".bs.js",
   "bsc-flags": ["-bs-super-errors"],
-  "ppx-flags": ["@baransu/graphql_ppx_re/ppx", "get_in_ppx/ppx"],
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx"],
   "refmt": 3,
   "warnings": {
     "number": "+A-48-102",
