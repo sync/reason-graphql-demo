@@ -5,11 +5,11 @@
   "public": false,
   "regions": ["all"],
   "builds": [
-    { "src": "/static/*", "use": "@now/static" },
+    { "src": "/public/static/*", "use": "@now/static" },
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/static/(.*)", "dest": "/public/static/$1" },
     {
       "src": "/service-worker.js$",
       "dest": "/_next/static/service-worker.js",
