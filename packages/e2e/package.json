@@ -9,7 +9,7 @@
     "e2e": "cypress run"
   },
   "devDependencies": {
-    "bluebird": "3.7.0",
+    "bluebird": "3.7.1",
     "cypress": "3.4.1",
     "faker": "4.1.0",
     "graphql-request": "1.8.2",
