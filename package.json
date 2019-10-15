@@ -112,7 +112,7 @@
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-standard": "19.0.0",
     "typescript": "3.6.4",
-    "webpack": "4.41.1"
+    "webpack": "4.41.2"
   },
   "prettier": {
     "singleQuote": true,
