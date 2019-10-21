@@ -1517,10 +1517,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@baransu/graphql_ppx_re@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.3.1.tgz#9b0741bfd4652ff7f33e2d75991517fc67e5ff03"
-  integrity sha512-PSYXkJ8yGLXomR8+nCW9elsElO7LwM9lPB6OtmCi9Se1JyGagI+/OIRDmiatR4gUHRcGkeWBWre1SeerRzAkyw==
+"@baransu/graphql_ppx_re@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.3.2.tgz#6876609be84853b1da6184b7868731066a892851"
+  integrity sha512-DseaS4enJpd43MyTEQZagbEktCzE0wpI96QSxOYR9AHpkgLNrSaM92yi8FBV8Q4sYmFX9191Bdjp+30Y0KWXwQ==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
