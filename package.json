@@ -88,7 +88,7 @@
     "autoprefixer": "9.6.5",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.0.6",
-    "bs-platform": "5.2.0",
+    "bs-platform": "5.2.1",
     "eslint": "6.5.1",
     "eslint-config-prettier": "6.4.0",
     "eslint-plugin-cypress": "2.7.0",
