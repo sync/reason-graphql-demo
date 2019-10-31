@@ -78,7 +78,7 @@
     "@storybook/addons": "5.2.5",
     "@storybook/react": "5.2.5",
     "@testing-library/jest-dom": "4.2.2",
-    "@testing-library/react": "9.3.0",
+    "@testing-library/react": "9.3.1",
     "@types/isomorphic-fetch": "0.0.35",
     "@types/jest": "24.0.21",
     "@types/react": "16.9.11",
