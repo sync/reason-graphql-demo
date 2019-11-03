@@ -12,14 +12,14 @@ import {Router_t as Next_Router_t} from '../../src/shims/Next.shim';
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {
   readonly activeClassName: string; 
-  readonly children: React.ReactChild; 
+  readonly children: React.ReactNode; 
   readonly href: string; 
   readonly router?: (null | undefined | Next_Router_t)
 };
 
 export const $$default: React.ComponentType<{
   readonly activeClassName: string; 
-  readonly children: React.ReactChild; 
+  readonly children: React.ReactNode; 
   readonly href: string; 
   readonly router?: (null | undefined | Next_Router_t)
 }> = function ActiveLink(Arg1: any) {
