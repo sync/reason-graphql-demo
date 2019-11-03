@@ -24,6 +24,9 @@ module.exports = {
       version: 'detect',
     },
   },
+  rules: {
+    'jest/expect-expect': 0,
+  },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],

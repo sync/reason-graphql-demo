@@ -19,7 +19,7 @@
   },
   "suffix": ".bs.js",
   "bsc-flags": ["-bs-super-errors"],
-  "ppx-flags": ["@baransu/graphql_ppx_re/ppx"],
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx6"],
   "refmt": 3,
   "warnings": {
     "number": "+A-48-102",

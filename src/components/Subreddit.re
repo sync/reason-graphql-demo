@@ -10,8 +10,8 @@ type subreddit = {posts: array(post)};
 module SubredditQuery = [%graphql
   {|
 query GetSubreddit($name: String!) {
-    subreddit(name: $name) @bsRecord {
-      posts @bsRecord {
+    subreddit(name: $name) {
+      posts {
         id
         title
       }
@@ -32,8 +32,8 @@ let make = (~name) => {
     switch (response##subreddit) {
     | Some(subreddit) =>
       <ul>
-        {subreddit.posts
-         |> Array.map(post => <li key={post.id}> {post.title |> ste} </li>)
+        {subreddit##posts
+         |> Array.map(post => <li key={post##id}> {post##title |> ste} </li>)
          |> ReasonReact.array}
       </ul>
     | _ => <div> {"No stories found" |> ste} </div>
