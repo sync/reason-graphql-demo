@@ -7894,10 +7894,10 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-gentype@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.1.0.tgz#274f9b684e5bcf983ad35e9df22c79c882bde7b0"
-  integrity sha512-NJyGcRL8giqeC1MSdcc+/WV6oWw/gy8Gcg9KFzYvpWltuPmm0WtChrUNQiTjO0dsuAjhwtEleDmWRmMLCTSfqA==
+gentype@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.2.0.tgz#0409a2f99221ec9fc41f6b41b92382d00014258c"
+  integrity sha512-2uOhJSHNJJFRcvOIyA3/zKRMAEb7xVRoFiIFIDZ+onB4CdfH1le2JZn26UuqgRTtwBJQ3kkTunXnSIDHKLdZ8Q==
 
 get-caller-file@^1.0.1:
   version "1.0.3"
