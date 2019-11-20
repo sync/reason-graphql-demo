@@ -8005,10 +8005,10 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-gentype@3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.4.3.tgz#ded96cac379e433fae769de66d75e1ac6dfc49b0"
-  integrity sha512-jhS3n62K63ebhmCd/X8fkCD2rdrT30nQ0RuWGMfveVOio3QZUTDSdqtyZKkoDaE4zkZXMuh5lLTJp5dXXgUHeA==
+gentype@3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.4.4.tgz#45cf9158ad45c9afde539155215cd9324fc1836e"
+  integrity sha512-sEsrqOa4ys2NJICg+e3cq9YlE12NFEq6bxGJdvg48VEEdLK3gdTNghDN5BMXzwl42qqp4nYYkgOhDgz2xGwwEA==
 
 get-caller-file@^1.0.1:
   version "1.0.3"
