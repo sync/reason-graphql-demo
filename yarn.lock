@@ -1943,10 +1943,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@baransu/graphql_ppx_re@0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.3.5.tgz#d168d689df47f5c0c5d99dea401e24cdf0946fa6"
-  integrity sha512-I2CgJQ8AlkGtGHWKrbvO88CNXpS8sEfil3DOA+uJNyGxlOruIGvaiFj8Oa+ayBAljOqanEqTgeEm2ec2UMQJOg==
+"@baransu/graphql_ppx_re@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.4.0.tgz#24f01e19d030768bba85a8676c70679c8fb63725"
+  integrity sha512-vCWaBTbLRHDRvl72e80UH1Xo6Rp7JaBJgBgt24jBX1zXPdpvELObwxapmaSdPHK+wI31X0fRJu9z6yD7IAlBDA==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
