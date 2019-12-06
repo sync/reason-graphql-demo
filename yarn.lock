@@ -2351,10 +2351,10 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@dblechoc/bs-apollo@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@dblechoc/bs-apollo/-/bs-apollo-2.1.0.tgz#9ce6aa89d9dd5ac1583423d1c637e09c750aff1a"
-  integrity sha512-Tt8Kkk5GceVWD5A3KYj7dwvvlDqIqep+1zPFLyQ3vpiyZSFtEQ8+TIMbt+m+dEhmo93lqBbt9fswsl/Fb21Jxg==
+"@dblechoc/bs-apollo@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@dblechoc/bs-apollo/-/bs-apollo-2.3.0.tgz#227109393c80d77c9490a05c8cfc41e1351ec532"
+  integrity sha512-usLaX8Znygs4MHys/HqzIkWBtaD6/qs6VphBQa2gjFuVtbXRHfb85eH+iToAxVsy8Z8Spm76ocBXzsUFLwpD+Q==
 
 "@dblechoc/bs-next@0.18.0":
   version "0.18.0"
