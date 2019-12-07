@@ -69,7 +69,7 @@
   "devDependencies": {
     "@babel/core": "7.7.5",
     "@babel/plugin-proposal-class-properties": "7.7.4",
-    "@baransu/graphql_ppx_re": "0.4.0",
+    "@baransu/graphql_ppx_re": "0.4.6",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.2.8",
     "@storybook/addon-centered": "5.2.8",
