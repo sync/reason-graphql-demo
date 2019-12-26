@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "bluebird": "3.7.2",
-    "cypress": "3.8.0",
+    "cypress": "3.8.1",
     "faker": "4.1.0",
     "graphql-request": "1.8.2",
     "ora": "4.0.3",
