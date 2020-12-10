@@ -107,7 +107,7 @@
     "now": "16.7.2",
     "npm-run-all": "4.1.5",
     "prettier": "1.19.1",
-    "start-server-and-test": "1.10.6",
+    "start-server-and-test": "1.11.6",
     "stylelint": "12.0.1",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-standard": "19.0.0",
